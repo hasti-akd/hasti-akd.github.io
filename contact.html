@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hasti Akbarideilami - Portfolio</title>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
+            @import url('https://fonts.cdnfonts.com/css/georgia');
+
+
+            /* Global Styles */
+
+            *{
+		        margin: 0;
+		        padding: 0;
+			}
+
+            /* Header styles */
+
+            header{
+                width: 100%;
+            }
+
+            nav{
+                height: 176px;
+                display: flex;
+                margin: auto;
+            }
+            .right{
+                font-family: 'Nova Cut', cursive;
+                font-size: 46px;
+
+                padding-top: 60px;
+                padding-left: 176px;
+            }
+            .left{
+                padding-top: 62px;
+                height: 21px;
+            }
+            .left a{
+                padding-left: 40px;
+                font-family: 'Times New Roman';
+                font-size: 18px;
+                color:#202124;
+                text-decoration: none;
+            }
+            .left a:first-child{
+                padding-left: 591px;
+            }
+            .line-1 {
+                height: 2.93px;
+                margin-top: 6.35px;
+                background: #202124;
+                width: 1068px;
+                transform:skew(-30deg,0deg);
+            }
+
+            /* main styles */
+
+            main{
+                width: 100%;
+                margin: auto;
+            }
+           
+            .container1{
+                height: 940px;
+                color:#202124;
+            }
+
+            .container1 p{
+                font-family: 'Georgia', sans-serif;
+                font-size: 28px;
+                padding-left: 176px;
+            }
+
+            .line-2{
+                height: 2px;
+                margin-top: 8px;
+                background: #202124;
+                width: 60px;
+                margin-left: 176px;
+            }
+
+            form{
+                margin: 60px 350px 60px 350px;               
+            }
+
+            input, label {
+                display:block;
+                font-family: 'Times New Roman';
+                font-size: 18px;
+            }
+
+            .innerContainer1 input[id="name"], input[id="email"], input[id="subject"], textarea, input[type=submit]{
+                width: 100%;
+                height: 61px;
+                border: 1px solid #a9a9a9;
+                box-sizing: border-box;
+                margin-top: 8px;
+                margin-bottom: 25px;
+            }
+
+            input[type=submit] {
+                background-color: #FFFFFF;
+                border: 1px solid #202124;
+                cursor: pointer;
+                width: 173px;
+                margin-left: 330px;
+                margin-top: 25px;
+            }    
+
+            /* footer styles */
+
+            footer{
+                width: 100%;
+                height: 176px;
+                margin: auto;
+                text-align: center;
+            }
+
+            footer p{
+                padding-top: 30px;
+                font-family: 'Times New Roman';
+                font-size: 16px;
+            }
+            
+            footer img{
+                padding-top: 25px;
+                padding-left: 5px;
+            }
+            
+    </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="right">H</div>
+                <div class="left">
+                    <a href="./">Home</a>
+                    <a href="./portfolio">Portfolio</a>
+                    <a href="./about">About</a>
+                    <a href="./photography">Photography</a>
+                    <a href="./contact">Contact</a>
+                    <div class="line-1"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container1">
+                <p>Contact</p>
+                <div class="line-2"></div>
+                <p style="font-size: 24px; padding-top: 60px;">Let's create something great together!</p>
+                <div class="innerContainer1">
+                    <form>
+                        <label for="name">Name *</label>
+                        <input type="text" id="name">
+                    
+                        <label for="email">Email *</label>
+                        <input type="email" id="email">
+
+                        <label for="subject">Subject</label>
+                        <input type="email" id="subject">
+                    
+                        <label for="message">Message *</label>
+                        <textarea id="message" style="height:200px"></textarea>
+                    
+                        <input type="submit" value="SUBMIT">
+                      </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Let get in touch!</p>
+            <a href="mailto:hasti.akbarideilami@georgebrown.ca"><img width=25px; hiegh=25px; src="image/email.svg"></a>
+            <a href="https://www.linkedin.com/in/hasti-akbarideilami/"><img width=27px; hiegh=27px; src="image/linkedin.svg"></a>
+            <p>Copyright © 2022 Hasti Akbarideilami.</p>
+        </footer>
+    </body>
+</html>
