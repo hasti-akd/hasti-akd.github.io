@@ -19,42 +19,57 @@
 
             /* Header styles */
 
-            header{
-                width: 100%;
+            header {
+            width: 100%;
             }
 
-            nav{
-                height: 176px;
-                display: flex;
-                margin: auto;
+            nav {
+            height: 176px;
+            display: flex;
+            margin: auto;
             }
-            .right{
-                font-family: 'Nova Cut', cursive;
-                font-size: 46px;
 
-                padding-top: 60px;
-                padding-left: 176px;
+            .right {
+            font-family: 'Nova Cut', cursive;
+            font-size: 2.8rem;
+            padding-top: 3.7rem;
+            padding-left: 11rem;
             }
-            .left{
-                padding-top: 62px;
-                height: 21px;
+
+            .left {
+            padding-top: 3.8rem;
+            height: 1.3rem;
+            position: relative;
             }
-            .left a{
-                padding-left: 40px;
-                font-family: 'Times New Roman';
-                font-size: 18px;
-                color:#202124;
-                text-decoration: none;
+
+            .left a {
+            padding-left: 2rem;
+            font-family: 'Times New Roman';
+            font-size: 1.125rem;
+            color: #202124;
+            text-decoration: none;
             }
-            .left a:first-child{
-                padding-left: 591px;
+
+            .left a:first-child {
+            padding-left: 34rem;
             }
+
             .line-1 {
-                height: 2.93px;
-                margin-top: 6.35px;
-                background: #202124;
-                width: 1068px;
-                transform:skew(-30deg,0deg);
+            position: relative;
+            height: 0.174rem;
+            margin-top: 0.55rem;
+            background: #202124;
+            width: 100%;
+            }
+
+            .line-1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transform: skew(-30deg);
+            background: #202124;
             }
 
             /* main styles */
@@ -107,7 +122,7 @@
                 border: 1px solid #202124;
                 cursor: pointer;
                 width: 173px;
-                margin-left: 330px;
+                margin-left: 22vw;
                 margin-top: 25px;
             }    
 
@@ -130,6 +145,94 @@
                 padding-top: 25px;
                 padding-left: 5px;
             }
+
+            /* Responsive Design */
+                        
+            @media screen and (max-width: 1200px) {
+
+            .left a {
+            padding-left: 2.25rem;
+            }
+
+            .left a:first-child {
+            padding-left: 18.7rem;
+            }
+
+            }
+
+            @media screen and (max-width: 1000px) {
+
+            .left a {
+            padding-left: 1.6rem;
+            }
+
+            form{
+                margin-left: 175px;    
+            }
+
+            }
+
+            @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                height: auto;
+                align-items: center;
+            }
+
+            .right {
+                padding-top: 4rem;
+                padding-left: 2.1rem;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            .left {
+                padding-top: 1.8rem;
+                height: auto;
+                position: static;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 0.62rem;
+            }
+
+            .left a{
+                font-size: 1rem;
+                padding-left: 1.12rem;
+            }
+
+            .left a:first-child {
+                padding-left: 2.25rem;
+            }
+
+            .line-1 {
+                margin-top: 0.625rem;
+                height: 0.12rem;
+            }
+
+            .line-1::before {
+                width: 100%;
+                left: 0;
+                transform: skew(-30deg, 0deg);
+                height: 0.1rem;
+            }
+            
+            .container1 p{
+                padding-top: 2.1rem;
+                padding-left: 2.1rem;
+            }
+
+            .line-2{
+                margin-left: 2.1rem;
+            }
+
+            form{
+                margin-left: 2.1rem;
+                margin-right: 2.1rem;       
+            }
+
+            }   
             
     </style>
     </head>
@@ -153,27 +256,28 @@
                 <div class="line-2"></div>
                 <p style="font-size: 24px; padding-top: 60px;">Let's create something great together!</p>
                 <div class="innerContainer1">
-                    <form>
+                    <form action="https://formspree.io/f/xlekpnzg" method="POST">
                         <label for="name">Name *</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" name="name">
                     
                         <label for="email">Email *</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="email">
 
                         <label for="subject">Subject</label>
-                        <input type="email" id="subject">
+                        <input type="email" id="subject" name="subject">
                     
                         <label for="message">Message *</label>
-                        <textarea id="message" style="height:200px"></textarea>
+                        <textarea id="message" style="height:200px" name="message"></textarea>
                     
                         <input type="submit" value="SUBMIT">
-                      </form>
+                    </form>
                 </div>
             </div>
         </main>
         <footer>
             <p>Let get in touch!</p>
-            <a href="mailto:hasti.akbarideilami@georgebrown.ca"><img width=25px; hiegh=25px; src="image/email.svg"></a>
+            <a href="mailto:hasti.akbarideilami@gmail.com"><img src="image/email.png"></a>
+            <a href="https://github.com/hasti-akd"><img src="image/github.svg"></a>
             <a href="https://www.linkedin.com/in/hasti-akbarideilami/"><img width=27px; hiegh=27px; src="image/linkedin.svg"></a>
             <p>Copyright © 2022 Hasti Akbarideilami.</p>
         </footer>

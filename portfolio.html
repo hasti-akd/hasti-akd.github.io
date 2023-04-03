@@ -20,42 +20,57 @@
 
             /* Header styles */
 
-            header{
-                width: 100%;
+            header {
+            width: 100%;
             }
 
-            nav{
-                height: 176px;
-                display: flex;
-                margin: auto;
+            nav {
+            height: 176px;
+            display: flex;
+            margin: auto;
             }
-            .right{
-                font-family: 'Nova Cut', cursive;
-                font-size: 46px;
 
-                padding-top: 60px;
-                padding-left: 176px;
+            .right {
+            font-family: 'Nova Cut', cursive;
+            font-size: 2.8rem;
+            padding-top: 3.7rem;
+            padding-left: 11rem;
             }
-            .left{
-                padding-top: 62px;
-                height: 21px;
+
+            .left {
+            padding-top: 3.8rem;
+            height: 1.3rem;
+            position: relative;
             }
-            .left a{
-                padding-left: 40px;
-                font-family: 'Times New Roman';
-                font-size: 18px;
-                color:#202124;
-                text-decoration: none;
+
+            .left a {
+            padding-left: 2rem;
+            font-family: 'Times New Roman';
+            font-size: 1.125rem;
+            color: #202124;
+            text-decoration: none;
             }
-            .left a:first-child{
-                padding-left: 591px;
+
+            .left a:first-child {
+            padding-left: 34rem;
             }
+
             .line-1 {
-                height: 2.93px;
-                margin-top: 6.35px;
-                background: #202124;
-                width: 1068px;
-                transform:skew(-30deg,0deg);
+            position: relative;
+            height: 0.174rem;
+            margin-top: 0.55rem;
+            background: #202124;
+            width: 100%;
+            }
+
+            .line-1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transform: skew(-30deg);
+            background: #202124;
             }
 
             /* main styles */
@@ -187,6 +202,139 @@
                 padding-top: 25px;
                 padding-left: 5px;
             }
+
+            /* Responsive Design */
+                        
+            @media screen and (max-width: 1200px) {
+
+            .left a {
+            padding-left: 2.25rem;
+            }
+
+            .left a:first-child {
+            padding-left: 18.7rem;
+            }
+            
+            }
+
+            @media screen and (max-width: 1000px) {
+
+            .left a {
+            padding-left: 1.6rem;
+            }
+
+            .left a:first-child {
+            padding-left: 8.7rem;
+            }
+
+            .container2{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .uniqueContainer{
+                flex-direction: column;
+            }
+
+
+            .innerContainer12 {
+                width: 332px;
+                height: auto;
+                margin-left: 175px;
+                margin-top: 0.5rem;
+                justify-content: center;
+            }
+
+            .innerContainer12 a{
+                display: inline-block;
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+
+            }
+
+            @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                height: auto;
+                align-items: center;
+            }
+
+            .right {
+                padding-top: 4rem;
+                padding-left: 2.1rem;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            .left {
+                padding-top: 1.8rem;
+                height: auto;
+                position: static;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 0.62rem;
+            }
+
+            .left a{
+                font-size: 1rem;
+                padding-left: 1.12rem;
+            }
+
+            .left a:first-child {
+                padding-left: 2.25rem;
+            }
+
+            .line-1 {
+                margin-top: 0.625rem;
+                height: 0.12rem;
+            }
+
+            .line-1::before {
+                width: 100%;
+                left: 0;
+                transform: skew(-30deg, 0deg);
+                height: 0.1rem;
+            } 
+
+            .container1 p{
+                padding-left: 2.1rem;
+                padding-top: 2.1rem;
+            }
+
+            .line-2{
+                margin-left: 2.1rem;
+            }
+
+            .container2{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .uniqueContainer{
+                flex-direction: column;
+            }
+
+            .innerContainer11 {
+                margin-left: 2.1rem;
+            }
+
+            .innerContainer12 {
+                width: 332px;
+                height: auto;
+                margin-left: 2.1rem;
+                margin-top: 0.5rem;
+                justify-content: center;
+            }
+
+            .innerContainer12 a{
+                display: inline-block;
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+            }   
             
     </style>
     </head>
@@ -211,7 +359,7 @@
                 <p style="font-size: 24px; padding-top: 24px;">These are examples of my work.</p>
             </div>
             <div class="container2" style="margin-bottom: 50px;">
-                <div style="display:flex;">
+                <div class="uniqueContainer" style="display:flex;">
                     <div class="innerContainer11">
                         <img src="image/belight2.png">
                     </div>
@@ -222,18 +370,18 @@
                         <a href="./belight">READ MORE</a>
                     </div>
                 </div>
-                <div style="display:flex;">
+                <div class="uniqueContainer" style="display:flex;">
                     <div class="innerContainer11 innerContainer21">
                         <img src="image/weder2.png">
                     </div>
                     <div class="innerContainer12 innerContainer22">
                         <p style="margin-top:55px; margin-bottom: 50px;">Weder</p>
-                        <p style="width:703px; margin-bottom: 50px; font-size: 22px;">This weather forecast interface is optimized for mobile devices, providing real-time weather updates and alerts.
-                            <br>Users can easily access a variety of weather information including detailed hourly forecasts, current and upcoming conditions, and important metrics like humidity, allergy levels, and air quality index.</p>
+                        <p style="margin-bottom: 50px; font-size: 22px;">This weather forecast interface is optimized for mobile devices, providing real-time weather updates and alerts.
+                            <br>Users can easily access a variety of weather information including detailed &nbsp hourly forecasts, current and upcoming conditions, and important metrics like humidity, allergy levels, and air quality index.</p>
                         <a href="./weder">READ MORE</a>
                     </div>
                 </div>
-                <div style="display:flex;">
+                <div class="uniqueContainer" style="display:flex;">
                     <div class="innerContainer11 innerContainer41">
                         <img src="image/wordle2.png">
                     </div>
@@ -244,13 +392,13 @@
                         <a href="./wordle">READ MORE</a>
                     </div>
                 </div>
-                <div style="display:flex;">
+                <div class="uniqueContainer" style="display:flex;">
                     <div class="innerContainer11 innerContainer31">
                         <img src="image/elemental2.png">
                     </div>
                     <div class="innerContainer12 innerContainer32">
                         <p style="margin-top:55px; margin-bottom: 50px;">Elemental</p>
-                        <p style="width:703px; margin-bottom: 50px; font-size: 22px;">Elemental is a single-page website. Although this kind of design provides a direct experience, it limits websites to relatively short and simple sections that sometimes lead to UX friction.
+                        <p style="margin-bottom: 50px; font-size: 22px;">Elemental is a single-page website. Although this kind of design provides a &nbsp direct experience, it limits websites to relatively short and simple sections that sometimes lead to UX friction.
                             <br>I improved the website by redesigning it as a multi-page, desktop and mobile-friendly platform, addressing pain points.</p>
                             <a href="./elemental">READ MORE</a>
                     </div>
@@ -259,7 +407,8 @@
         </main>
         <footer>
             <p>Let get in touch!</p>
-            <a href="mailto:hasti.akbarideilami@georgebrown.ca"><img width=25px; hiegh=25px; src="image/email.svg"></a>
+            <a href="mailto:hasti.akbarideilami@gmail.com"><img src="image/email.png"></a>
+            <a href="https://github.com/hasti-akd"><img src="image/github.svg"></a>
             <a href="https://www.linkedin.com/in/hasti-akbarideilami/"><img width=27px; hiegh=27px; src="image/linkedin.svg"></a>
             <p>Copyright © 2022 Hasti Akbarideilami.</p>
         </footer>

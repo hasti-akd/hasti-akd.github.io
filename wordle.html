@@ -17,44 +17,63 @@
 		        padding: 0;
 			}
 
+            html {
+                scroll-behavior: smooth;
+            }
+
             /* Header styles */
 
-            header{
-                width: 100%;
+            header {
+            width: 100%;
             }
 
-            nav{
-                height: 176px;
-                display: flex;
-                margin: auto;
+            nav {
+            height: 176px;
+            display: flex;
+            margin: auto;
             }
-            .right{
-                font-family: 'Nova Cut', cursive;
-                font-size: 46px;
 
-                padding-top: 60px;
-                padding-left: 176px;
+            .right {
+            font-family: 'Nova Cut', cursive;
+            font-size: 2.8rem;
+            padding-top: 3.7rem;
+            padding-left: 11rem;
             }
-            .left{
-                padding-top: 62px;
-                height: 21px;
+
+            .left {
+            padding-top: 3.8rem;
+            height: 1.3rem;
+            position: relative;
             }
-            .left a{
-                padding-left: 40px;
-                font-family: 'Times New Roman';
-                font-size: 18px;
-                color:#202124;
-                text-decoration: none;
+
+            .left a {
+            padding-left: 2rem;
+            font-family: 'Times New Roman';
+            font-size: 1.125rem;
+            color: #202124;
+            text-decoration: none;
             }
-            .left a:first-child{
-                padding-left: 591px;
+
+            .left a:first-child {
+            padding-left: 34rem;
             }
+
             .line-1 {
-                height: 2.93px;
-                margin-top: 6.35px;
-                background: #202124;
-                width: 1068px;
-                transform:skew(-30deg,0deg);
+            position: relative;
+            height: 0.174rem;
+            margin-top: 0.55rem;
+            background: #202124;
+            width: 100%;
+            }
+
+            .line-1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transform: skew(-30deg);
+            background: #202124;
             }
 
             /* main styles */
@@ -123,6 +142,19 @@
                 color: inherit;
             }
 
+            .top a{
+                float: right;
+                margin-right: 175px;
+                color:#5A5959;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                padding-bottom: 28px;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                cursor: pointer;
+            }
+
             /* footer styles */
 
             footer{
@@ -136,17 +168,92 @@
                 padding-top: 30px;
                 font-family: 'Times New Roman';
                 font-size: 16px;
+                clear: right; 
             }
             
             footer img{
                 padding-top: 25px;
                 padding-left: 5px;
             }
+
+            /* Responsive Design */
+                        
+            @media screen and (max-width: 1200px) {
+
+            .left a {
+            padding-left: 2.25rem;
+            }
+
+            .left a:first-child {
+            padding-left: 18.7rem;
+            }
+
+            }
+
+            @media screen and (max-width: 1000px) {
+
+            .left a {
+            padding-left: 1.6rem;
+            }
+
+            .left a:first-child {
+            padding-left: 8.7rem;
+            }
+
+            }
+
+            @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                height: auto;
+                align-items: center;
+            }
+
+            .right {
+                padding-top: 4rem;
+                padding-left: 2.1rem;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            .left {
+                padding-top: 1.8rem;
+                height: auto;
+                position: static;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 0.62rem;
+            }
+
+            .left a{
+                font-size: 1rem;
+                padding-left: 1.12rem;
+            }
+
+            .left a:first-child {
+                padding-left: 2.25rem;
+            }
+
+            .line-1 {
+                margin-top: 0.625rem;
+                height: 0.12rem;
+            }
+
+            .line-1::before {
+                width: 100%;
+                left: 0;
+                transform: skew(-30deg, 0deg);
+                height: 0.1rem;
+            } 
+
+            }   
             
     </style>
     </head>
     <body>
-        <header>
+        <header id="section-1">
             <nav>
                 <div class="right">H</div>
                 <div class="left">
@@ -178,17 +285,24 @@
                 <p style="font-size: 24px; padding-left: 14px;">Design Process</p>
                 <div class="line-2"></div>
                 <p style="font-size: 24px;">Develop</p>
-                <p>My journey as a web developer began with the prototyping phase of my project, where I utilized HTML and CSS to create a solid foundation. HTML allowed me to structure the content of my website, while CSS brought the design to life with its visually appealing styles and elements.</p>
-                <p>With the foundation set, I went on to enhance the functionality of my project using JavaScript and Bootstrap. These cutting-edge technologies empowered me to add dynamic and interactive features and create a responsive design that provided a seamless user experience on multiple devices. </p>
-                <p style="margin-bottom: 20px;">The combination of HTML, CSS, JavaScript, and Bootstrap allowed me to turn my vision into a reality and complete the build of my project.</p>
+                <p>As a web developer, I began my journey by prototyping my project with HTML and CSS, which provided a strong foundation for my work. HTML allowed me to structure the content of my single-page application, while CSS enabled me to add visually appealing styles and elements.</p>
+                <p>Once I had established a solid foundation, I enhanced my project's functionality with JavaScript. This cutting-edge technology allowed me to add dynamic and interactive features to my application.
+                <br>I implemented five main functions, including efficient storing and manipulating game data using arrays. I also incorporated modals to display game results and improve gameplay flow. Dynamic updates and user input validation were achieved through the creation and manipulation of the DOM.
+                </p>
+                <p>To further improve the design and responsiveness of my application, I utilized the Bootstrap CSS framework, which enabled me to create a seamless user experience across multiple devices.</p>               
+                <p style="margin-bottom: 20px;">By combining HTML, CSS, JavaScript, and Bootstrap, I brought my vision to life and built an application that looked great and functioned smoothly and efficiently.</p>
                 <br><a href="https://hasti-akd.github.io/Wordle/">VIEW SITE</a>
                 <br>
                 <img style="margin-top: 60px; width: 1090px;" src="image/wordle3.png">
+            </div><br>
+            <div class="top">
+                <a href="#section-1">Back To Top</a>
             </div>
         </main>
         <footer>
             <p>Let get in touch!</p>
-            <a href="mailto:hasti.akbarideilami@georgebrown.ca"><img width=25px; hiegh=25px; src="image/email.svg"></a>
+            <a href="mailto:hasti.akbarideilami@gmail.com"><img src="image/email.png"></a>
+            <a href="https://github.com/hasti-akd"><img src="image/github.svg"></a>
             <a href="https://www.linkedin.com/in/hasti-akbarideilami/"><img width=27px; hiegh=27px; src="image/linkedin.svg"></a>
             <p>Copyright © 2022 Hasti Akbarideilami.</p>
         </footer>

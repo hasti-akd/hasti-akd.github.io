@@ -19,43 +19,57 @@
 
             /* Header styles */
 
-            header{
-                width: 100%;
+            header {
+            width: 100%;
             }
 
-            nav{
-                height: 176px;
-                display: flex;
-                margin: auto;
+            nav {
+            height: 176px;
+            display: flex;
+            margin: auto;
             }
-            .right{
-                font-family: 'Nova Cut', cursive;
-                font-size: 46px;
 
-                padding-top: 60px;
-                padding-left: 176px;
+            .right {
+            font-family: 'Nova Cut', cursive;
+            font-size: 2.8rem;
+            padding-top: 3.7rem;
+            padding-left: 11rem;
             }
-            .left{
-                padding-top: 62px;
-                height: 21px;
+
+            .left {
+            padding-top: 3.8rem;
+            height: 1.3rem;
+            position: relative;
             }
-            .left a{
-                padding-left: 40px;
-                font-family: 'Times New Roman';
-                font-size: 18px;
-                color:#202124;
-                text-decoration: none;
-                
+
+            .left a {
+            padding-left: 2rem;
+            font-family: 'Times New Roman';
+            font-size: 1.125rem;
+            color: #202124;
+            text-decoration: none;
             }
-            .left a:first-child{
-                padding-left: 591px;
+
+            .left a:first-child {
+            padding-left: 34rem;
             }
+
             .line-1 {
-                height: 2.93px;
-                margin-top: 6.35px;
-                background: #202124;
-                width: 1068px;
-                transform:skew(-30deg,0deg);
+            position: relative;
+            height: 0.174rem;
+            margin-top: 0.55rem;
+            background: #202124;
+            width: 100%;
+            }
+
+            .line-1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            transform: skew(-30deg);
+            background: #202124;
             }
 
             /* main styles */
@@ -63,9 +77,6 @@
             main{
                 width: 100%;
                 margin: auto;
-            }
-            section{
-                height: 474px;
             }
 
             h1{
@@ -80,9 +91,6 @@
                 font-family: 'Times New Roman';
                 font-size: 28px;
                 line-height: 36px;
-            }
-            .container1{
-                height:1539px;
             }
 
             .container1 p, .container1 a{
@@ -132,7 +140,7 @@
             }
 
             .innerContainer12 a{
-                margin-left: 41px;
+                margin-left: 2.1rem;
                 font-size: 18px;
                 border: 1px solid #202124;
                 cursor: pointer;
@@ -143,6 +151,7 @@
             .innerContainer21 {
                 height: 622px;
                 margin-top: 60px;
+                background-color: #A5BAC633;
             }
 
             .innerContainer21 img{
@@ -191,7 +200,156 @@
                 padding-top: 25px;
                 padding-left: 5px;
             }
+
+            /* Responsive Design */
             
+            @media screen and (max-width: 1200px) {
+
+            .left a {
+            padding-left: 2.25rem;
+            }
+
+            .left a:first-child {
+            padding-left: 18.7rem;
+            }
+
+            .innerContainer11,
+            .innerContainer12 {
+                width: 90%;
+                height: auto;
+            }
+
+            .innerContainer11 img {
+                padding:  20px 12px;
+                width: 94%;
+                height: auto;
+            }
+
+            .innerContainer12 p:nth-child(2) {
+                margin-bottom: 20% !important;
+            }
+
+            }
+
+            @media screen and (max-width: 1000px) {
+
+            .left a {
+            padding-left: 1.6rem;
+            }
+
+            .left a:first-child {
+            padding-left: 8.7rem;
+            }
+
+            .innerContainer12 p:nth-child(2) {
+                margin-bottom: 10% !important;
+            }
+
+            }
+
+            @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                height: auto;
+                align-items: center;
+            }
+
+            .right {
+                padding-top: 4rem;
+                padding-left: 2.1rem;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            .left {
+                padding-top: 1.8rem;
+                height: auto;
+                position: static;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 0.62rem;
+            }
+
+            .left a{
+                font-size: 1rem;
+                padding-left: 1.12rem;
+            }
+
+            .left a:first-child {
+                padding-left: 2.25rem;
+            }
+
+            .line-1 {
+                margin-top: 0.625rem;
+                height: 0.12rem;
+            }
+
+            .line-1::before {
+                width: 100%;
+                left: 0;
+                transform: skew(-30deg, 0deg);
+                height: 0.1rem;
+            }
+            
+
+            h1{
+                padding-left: 2.1rem;
+                font-size: 	1.75rem;
+            }
+
+            section p{
+                padding-left: 2.1rem;
+                font-size: 1.375rem;
+            }
+
+            .container1 p{
+                padding-left: 2.1rem;
+                font-size: 1.625rem;
+            }
+
+            .line-2{
+                margin-left: 2.1rem;
+            }
+
+
+            .container11 {
+                flex-direction: column;
+            }
+
+            .innerContainer11,
+            .innerContainer12 {
+                width: 90%;
+                margin: 1.5rem;
+                margin-bottom: 5px !important;
+                height: auto;
+            }
+
+            .innerContainer11 img {
+                padding:  20px 12px;
+                width: 94%;
+                height: auto;
+            }
+
+            .innerContainer12 p:nth-child(2) {
+                margin-bottom: 10% !important;
+            }
+
+            .innerContainer12{
+                height: 300px;
+                margin-top: 2px !important;
+            }   
+
+            .innerContainer12 p{
+                font-size: 	22px !important;
+            }   
+
+            .innerContainer12 a{
+                font-size: 	16px !important;
+            }   
+            
+        }
     </style>
     </head>
     <body>
@@ -213,12 +371,13 @@
                 <h1>Hello, I’m Hasti.</h1>
                 <p>A passionate, data-driven product designer with an engineering perspective.</p>
                 <p>I find joy in crafting thoughtful designs that enhance daily life and bring delight.</p>
-                <p>Currently, a full-time student of web development - front-end design at George Brown College.</p>>
+                <p>Currently, a full-time student of web development - front-end design at George Brown College.</p>
+                <br><br>
             </section>
             <div class="container1">
                 <p>My recent work</p>
                 <div class="line-2"></div>
-                <div style="display:flex;">
+                <div class='container11' style="display:flex;">
                     <div class="innerContainer11">
                         <img src="image/belight.png">
                     </div>
@@ -228,24 +387,26 @@
                         <a href="./belight">READ MORE</a>
                     </div>
                 </div>
-                <div style="display:flex;">
+                <div class='container11' style="display:flex;">
                     <div class="innerContainer11 innerContainer21">
                         <img src="image/weder.jpg">
                     </div>
                     <div class="innerContainer12 innerContainer22">
                         <p>Weder</p>
-                        <p style="margin-bottom: 370px; font-size: 24px;">A Weather Forecast App</p>
+                        <p style="margin-bottom: 100%; font-size: 24px;">A Weather Forecast App</p>
                         <a href="./weder">READ MORE</a>
                     </div>
                 </div>
             </div>
+            <br><br>
             <div style="margin: auto;" class="container2">
                 <a href="./portfolio">View More Projects</a>
             </div>
         </main>
         <footer>
             <p>Let get in touch!</p>
-            <a href="mailto:hasti.akbarideilami@georgebrown.ca"><img width=25px; hiegh=25px; src="image/email.svg"></a>
+            <a href="mailto:hasti.akbarideilami@gmail.com"><img src="image/email.png"></a>
+            <a href="https://github.com/hasti-akd"><img src="image/github.svg"></a>
             <a href="https://www.linkedin.com/in/hasti-akbarideilami/"><img width=27px; hiegh=27px; src="image/linkedin.svg"></a>
             <p>Copyright © 2022 Hasti Akbarideilami.</p>
         </footer>
